@@ -47,6 +47,10 @@ node('maven-appdev') {
       //echo "Running Code Analysis"
       //sh "${mvnCmd} sonar:sonar -Dsonar.host.url=http://sonarqube-hsp-sonarqube.apps.0845.openshift.opentlc.com/ -Dsonar.projectName=${JOB_BASE_NAME}-${devTag}"
     }
+    
+    def destApp   = "raffle-service-green"
+    def activeApp = ""
+    
     // Publish the built war file to Nexus
     stage('Prod') {
       sleep 5
