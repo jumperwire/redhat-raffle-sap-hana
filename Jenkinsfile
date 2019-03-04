@@ -28,7 +28,7 @@ node('maven-appdev') {
     // Using Maven build the war file
     // Do not run tests in this step
     stage('Dev') {
-      sleep 15
+      sleep 5
       //echo "Building version ${devTag}"
       //sh "wget https://www.dropbox.com/s/nvkw8gh3rmf932j/ngdbc-2.3.58.jar?dl=1"
       //sh "mv ngdbc-2.3.58.jar?dl=1 ngdbc-2.3.58.jar"
@@ -37,18 +37,19 @@ node('maven-appdev') {
     }
     // Using Maven run the unit tests
     stage('Test') {
-      sleep 15
+      sleep 5
       //echo "Running Unit Tests"
       //sh "${mvnCmd} test"
     }
     // Using Maven call SonarQube for Code Analysis
     stage('QA') {
-      sleep 15
+      sleep 5
       //echo "Running Code Analysis"
       //sh "${mvnCmd} sonar:sonar -Dsonar.host.url=http://sonarqube-hsp-sonarqube.apps.0845.openshift.opentlc.com/ -Dsonar.projectName=${JOB_BASE_NAME}-${devTag}"
     }
     // Publish the built war file to Nexus
     stage('Prod') {
+      sleep 5
       //echo "Publish to Nexus"
       //sh "${mvnCmd} deploy -DskipTests=true -DaltDeploymentRepository=nexus::default::http://nexus3.nexus.svc.cluster.local:8081/repository/releases"
 
