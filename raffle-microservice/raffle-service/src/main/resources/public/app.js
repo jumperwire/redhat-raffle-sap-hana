@@ -459,9 +459,13 @@ function loop() {
     // Launch manual fireworks.
     if(isMouseDown) {
 	    //alert(xhr.response[CURR].firstName + " " + xhr.response[CURR].lastName + " " + xhr.response[CURR].id);
+	    
+	    //NOTE TO ANDREW: DON'T CHANGE THIS CODE!!!
+	    var legalMsg = "<br />Disclaimer: blah, blah, blah.";
+	    
 	    var modal = document.getElementById('myModal');
 	    modal.className = "modal-content";
-	    modal.innerHTML = xhr.response[CURR].firstName + ' ' + xhr.response[CURR].lastName + ' ' + xhr.response[CURR].id ;
+	    modal.innerHTML = xhr.response[CURR].firstName + ' ' + xhr.response[CURR].lastName + ' ' + xhr.response[CURR].id + ' ' + legalMsg;
 	    modal.style.display = "block";
 	    modal.onclick = function(event) {
                if (event.target == modal) {
