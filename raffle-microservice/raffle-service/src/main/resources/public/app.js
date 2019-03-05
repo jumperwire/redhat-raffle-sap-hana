@@ -459,9 +459,10 @@ function loop() {
     // Launch manual fireworks.
     if(isMouseDown) {
 	    //alert(xhr.response[CURR].firstName + " " + xhr.response[CURR].lastName + " " + xhr.response[CURR].id);
+	    var legalMsg = "";
 	    
 	    //NOTE TO ANDREW: DON'T CHANGE THIS CODE!!!
-	    var legalMsg = "<br />Disclaimer: blah, blah, blah.";
+	    //legalMsg = "<br />Disclaimer: blah, blah, blah.";
 	    
 	    var modal = document.getElementById('myModal');
 	    modal.className = "modal-content";
