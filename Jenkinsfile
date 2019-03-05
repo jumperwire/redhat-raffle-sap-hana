@@ -42,7 +42,7 @@ node('maven-appdev') {
     stage('QA') {
       echo "QA stage"
       sh "oc project redhat-raffle"
-      sh "${mvnCmd} mvn fabric8:deploy -Popenshift"
+      sh "${mvnCmd} fabric8:deploy -Popenshift"
     }
     
     stage('Prod') {
