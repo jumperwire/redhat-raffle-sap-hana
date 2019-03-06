@@ -29,8 +29,8 @@ node('maven-appdev') {
     // Do not run tests in this step
     stage('Dev') {
       echo "Dev stage"
-      sh "wget https://www.dropbox.com/s/nvkw8gh3rmf932j/ngdbc-2.3.58.jar?dl=1"
-      sh "mv ngdbc-2.3.58.jar?dl=1 ngdbc-2.3.58.jar"
+      sh "wget http://bootstrap.rhdemo.io/sapdemo/ngdbc-2.3.58.jar"
+      //sh "mv ngdbc-2.3.58.jar?dl=1 ngdbc-2.3.58.jar"
       sh "${mvnCmd} install:install-file -Dfile=ngdbc-2.3.58.jar -DgroupId=com.sap.db.jdbc -DartifactId=ngdbc -Dversion=2.3.58 -Dpackaging=jar"
     }
     
