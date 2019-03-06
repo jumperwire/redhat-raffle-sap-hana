@@ -462,7 +462,7 @@ function loop() {
 	    var legalMsg = "";
 	    
 	    //NOTE TO ANDREW: DON'T CHANGE THIS CODE!!!
-	    //legalMsg = "<br />Disclaimer: blah, blah, blah.";
+	    legalMsg = "<br />Disclaimer: The sponsor of this Sweepstakes is SPONSOR COMPANY NAME ("Sponsor"). By participating in the Sweepstakes, each Entrant unconditionally accepts and agrees to comply with and abide by these Official Rules and the decisions of Sponsor, which shall be final and binding in all respects. Sponsor is responsible for the collection, submission or processing of Entries and the overall administration of the Sweepstakes. Entrants should look solely to Sponsor with any questions, comments or problems related to the Sweepstakes.";
 	    
 	    var modal = document.getElementById('myModal');
 	    modal.className = "modal-content";
