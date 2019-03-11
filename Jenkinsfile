@@ -36,7 +36,7 @@ node('maven-appdev') {
     
     stage('Test') {
       echo "Test stage"
-      sh "${mvnCmd} clean package -DskipTests"
+      sh "${mvnCmd} clean -DskipTests"
     }
     
     stage('QA') {
