@@ -32,11 +32,13 @@ node('maven-appdev') {
       sh "wget http://bootstrap.rhdemo.io/sapdemo/ngdbc-2.3.58.jar"
       //sh "mv ngdbc-2.3.58.jar?dl=1 ngdbc-2.3.58.jar"
       sh "${mvnCmd} install:install-file -Dfile=ngdbc-2.3.58.jar -DgroupId=com.sap.db.jdbc -DartifactId=ngdbc -Dversion=2.3.58 -Dpackaging=jar"
+      sleep 5
     }
     
     stage('Test') {
       echo "Test stage"
       sh "${mvnCmd} clean -DskipTests"
+      sleep 5
     }
     
     stage('QA') {
