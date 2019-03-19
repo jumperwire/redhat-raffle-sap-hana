@@ -23,6 +23,23 @@ canvas {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+div{background-color:#e00 !important; top: 0vh; overflow:hidden;}
+div{animation: tada 1s cubic-bezier(.5,.2,.2,1.5); transition: all .3s ease; position:relative; border-radius: .5em;}
+
+div:before{content:""; position:absolute; top:0; left: -25%; display:block; animation: swoopy 1s ease; 
+background-color:#eee; width: 20%; height:100%; transform:skew(-45deg);}
+@keyframes swoopy{
+    100%{left: 150%;}
+}
+
+
+@keyframes tada{
+    0%{transform:scale(.9); opacity:0}
+}
+div {user-select:none; cursor:pointer;}
+div:hover{background-color:#bbb !important;}
+
+
 /* Modal Content/Box */
 .modal-content {
     background-color: #cc0000;
