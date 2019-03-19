@@ -462,7 +462,7 @@ function loop() {
 	    var legalMsg = "";
 	    
 	    //TODO: ANDREW, DON'T CHANGE THIS CODE!!!
-	    legalMsg = "<br />Disclaimer: The sponsor of this Raffle is Red Hat, Inc. (\"Sponsor\"). By participating in the Raffle, each Entrant unconditionally accepts and agrees to comply with and abide by these Official Rules and the decisions of Sponsor, which shall be final and binding in all respects. Sponsor is responsible for the collection, submission or processing of Entries and the overall administration of the Raffle. Entrants should look solely to Sponsor with any questions, comments or problems related to the Raffle.";
+	    legalMsg = "<br /><blockquote>Disclaimer: The sponsor of this Raffle is Red Hat, Inc. (\"Sponsor\"). By participating in the Raffle, each Entrant unconditionally accepts and agrees to comply with and abide by these Official Rules and the decisions of Sponsor, which shall be final and binding in all respects. Sponsor is responsible for the collection, submission or processing of Entries and the overall administration of the Raffle. Entrants should look solely to Sponsor with any questions, comments or problems related to the Raffle.</blockquote>";
 	    
 	    var modal = document.getElementById('myModal');
 	    modal.className = "modal-content";
